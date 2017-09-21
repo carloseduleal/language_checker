@@ -15,7 +15,7 @@ Script to check if texts are present on two different webpages. So, it can be us
 ## Running
 > python language_checker2.py <url1> <url2>
 
-@authors
+#### Authors
 Carlos Leal (celeal@thoughtworks.com)
 Kamila Serafim (kserafim@thoughtworks.com)
 Haysa Rodrigues (rodrigues.haysa@gmail.com)

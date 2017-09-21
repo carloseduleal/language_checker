@@ -3,9 +3,13 @@ Script to check if texts are present on two different webpages. So, it can be us
 
 ## Dependencies:
 > pip install urllib
+
 > pip install bs4
+
 > pip install BeautifulSoup
+
 > pip install re
+
 > pip install timeit
 
 ## Running

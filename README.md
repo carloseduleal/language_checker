@@ -17,5 +17,5 @@ Script to check if texts are present on two different webpages. So, it can be us
 
 #### Authors
 Carlos Leal (celeal@thoughtworks.com)  
+Haysa Rodrigues (haysa.rodrigues@liferay.com)  
 Kamila Serafim (kserafim@thoughtworks.com)  
-Haysa Rodrigues (rodrigues.haysa@gmail.com)  

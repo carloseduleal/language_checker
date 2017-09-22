@@ -22,27 +22,23 @@ print "     Y8b  d8 88   88 88.     Y8b  d8 88 `88. 88.     88 `88. "
 print "       Y88P  YP   YP Y88888P   Y88P  YP   YD Y88888P 88   YD \n"
 print " -------------------------------------------------------------------\n"
 
-url = sys.argv[1]
-html = urllib.urlopen(url).read()
-soup = BeautifulSoup(html, "lxml")
+firstUrl = sys.argv[1]
+secondUrl = sys.argv[2]
 
-# remove javascript
-for script in soup(["script", "style"]):
-    script.extract()
+def extractTextFromTheURL(url):
+    html = urllib.urlopen(url).read()
+    soup = BeautifulSoup(html, "lxml")
 
-text = soup.get_text("\n").splitlines()
+    for script in soup(["script", "style"]):
+        script.extract()
 
-url2 = sys.argv[2]
-html2 = urllib.urlopen(url2).read()
-soup2 = BeautifulSoup(html2, "lxml")
+    textList = soup.get_text("\n").splitlines()
+    return textList
 
-# remove javascript
-for script in soup2(["script", "style"]):
-    script.extract()
+textListFromFirstUrl = extractTextFromTheURL(firstUrl)
+textListFromSecondUrl = extractTextFromTheURL(secondUrl)
 
-text2 = soup2.get_text("\n").splitlines()
-
-same_values = set(text) & set(text2)
+same_values = set(textListFromFirstUrl) & set(textListFromSecondUrl)
 result = list(filter(None, same_values))
 
 CRED = '\033[91m'

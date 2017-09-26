@@ -1,0 +1,3 @@
+Product, https://www.nike.com/be/nl_nl/, https://www.nike.com/sa/en_gb/
+Checkout, https://www.google.com, https://www.google.com
+Search, http://g1.globo.com, http://www.r7.com
